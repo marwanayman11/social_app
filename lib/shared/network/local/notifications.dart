@@ -4,7 +4,6 @@ import 'package:dio/dio.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-import 'package:social_app/modules/chat/chat.dart';
 import 'package:social_app/shared/components/components.dart';
 
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
@@ -13,8 +12,7 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
 
 class PushNotifications {
   static final FirebaseMessaging _fcm = FirebaseMessaging.instance;
-  static const String _authServerKey =
-      'AAAAoxOe8nM:APA91bGtk07aDPeK3PBE1oTfCQLR_DN88iyzfpU9JbUNM0SK2WxSL-gem0iiG2XpMnf6GuygzmZ02GSCUBPDvIswj-Ies5_8xd-MAgOsNr8zr4UUyBDR2HjYdGMrj696pJEyiHH44Grn'; // Paste your FCM auth Key here
+  static const String _authServerKey ='';
 
   static Future initialize() async {
     if (Platform.isAndroid)
