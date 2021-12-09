@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'package:bloc/bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -718,8 +717,6 @@ class SocialCubit extends Cubit<SocialStates> {
       required String dateTime,
       required String? fcm,
       String? messageImage}) async {
-    final translator = GoogleTranslator();
-    Translation translation = await translator.translate(text);
     MessageModel model = MessageModel(
         dateTime: dateTime,
         text: text,
